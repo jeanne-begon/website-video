@@ -1,0 +1,64 @@
+
+.banner h1 {
+	font-size: 100px;
+	margin:0px;
+}
+
+.banner h2 {
+	font-size: 50px;
+	font-weight: lighter;
+	opacity: 0.8;
+	margin-bottom: 40px;
+	margin-top: 0px;
+}
+
+.background-video {
+	position:fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: -100;
+}
+
+#fullscreen-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.textdiv {
+	position: fixed;
+  	bottom: 0;
+  	color: #f1f1f1;
+ 	width: 100%;
+ 	margin-bottom: 30px;
+
+}
+
+@media (min-aspect-ratio: 16/9) {
+  #fullscreen-video {
+    height: 300%;
+    top:-100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  #fullscreen-video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .background-video {
+    background: url('../../background.jpg') center center / cover no-repeat;
+  }
+
+  #fullscreen-video {
+    display: none;
+  }
+}
